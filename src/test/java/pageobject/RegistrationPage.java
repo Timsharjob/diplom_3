@@ -10,9 +10,9 @@ import java.time.Duration;
 
 public class RegistrationPage {
     private final WebDriver driver;
-    private final By nameTextField = By.xpath("//fieldset[1]/div/div/input");
-    private final By emailTextField = By.xpath("//fieldset[2]/div/div/input");
-    private final By passwordTextField = By.xpath("//fieldset[3]/div/div/input");
+    private final By nameTextField = By.xpath("//fieldset[1]//input");
+    private final By emailTextField = By.xpath("//fieldset[2]//input");
+    private final By passwordTextField = By.xpath("//fieldset[3]//input");
     private final By registrationButton = By.xpath("//button[text()='Зарегистрироваться']");
     private final By incorrectPasswordText = By.xpath("//p[@class='input__error text_type_main-default']");
     private final By loginButton = By.xpath("//a[@class='Auth_link__1fOlj']");

@@ -11,7 +11,7 @@ import java.time.Duration;
 public class MainPage {
     private final WebDriver driver;
     private final By personalArea = By.xpath("//p[text()='Личный Кабинет']");
-    private final By checkoutButton = By.xpath("//section[2]/div/button");
+    private final By checkoutButton = By.xpath("//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']");
     private final By bunButton = By.xpath("//section[1]/div[1]/div[1]");
     private final By sauceButton = By.xpath("//section[1]/div[1]/div[2]");
     private final By fillingButton = By.xpath("//section[1]/div[1]/div[3]");

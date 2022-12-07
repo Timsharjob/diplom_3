@@ -1,35 +1,11 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.LoginPage;
 import pageobject.MainPage;
 import pageobject.ProfilePage;
 
-import java.time.Duration;
-
-public class ProfileTest {
-    private WebDriver driver;
-
-    //   String pathYandexDriver = "C:\\Automation\\yandexdriver.exe"; //Yandex Browser
-
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver",pathYandexDriver); //Yandex Browser
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://stellarburgers.nomoreparties.site/");
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+public class ProfileTest extends BaseTest {
 
     @DisplayName("Переход по клику на «Личный кабинет»")
     @Test

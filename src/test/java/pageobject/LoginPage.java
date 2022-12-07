@@ -12,8 +12,8 @@ public class LoginPage {
     private final WebDriver driver;
     private final By registrationButton = By.xpath("//a[text()='Зарегистрироваться']");
     private final By loginButton = By.xpath("//button[text()='Войти']");
-    private final By emailTextField = By.xpath("//fieldset[1]/div/div/input");
-    private final By passwordTextField = By.xpath("//fieldset[2]/div/div/input");
+    private final By emailTextField = By.xpath("//fieldset[1]//input");
+    private final By passwordTextField = By.xpath("//fieldset[2]//input");
     private final By forgotPasswordButton = By.xpath("//a[text()='Восстановить пароль']");
 
     public LoginPage(WebDriver driver) {

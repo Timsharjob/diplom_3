@@ -1,36 +1,12 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pageobject.ForgorPasswordPage;
+import pageobject.ForgotPasswordPage;
 import pageobject.LoginPage;
 import pageobject.MainPage;
 import pageobject.RegistrationPage;
 
-import java.time.Duration;
-
-public class LoginTest {
-    private WebDriver driver;
-
-//    String pathYandexDriver = "C:\\Automation\\yandexdriver.exe"; //Yandex Browser
-
-    @Before
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver",pathYandexDriver); //Yandex Browser
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://stellarburgers.nomoreparties.site/");
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+public class LoginTest extends BaseTest {
 
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
     @Test
@@ -76,10 +52,10 @@ public class LoginTest {
     public void testLoginForgotPasswordPage() {
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
-        ForgorPasswordPage forgorPasswordPage = new ForgorPasswordPage(driver);
+        ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage(driver);
         mainPage.clickPersonalArea();
         loginPage.clickForgotPasswordButton();
-        forgorPasswordPage.clickLoginButton();
+        forgotPasswordPage.clickLoginButton();
         loginPage.setEmailTextField("Timur2@test.ru");
         loginPage.setPasswordTextField("222222");
         loginPage.clickLoginButton();

@@ -4,11 +4,11 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ForgorPasswordPage {
+public class ForgotPasswordPage {
     private final WebDriver driver;
     private final By loginButton = By.xpath("//a[@class='Auth_link__1fOlj']");
 
-    public ForgorPasswordPage(WebDriver driver) {
+    public ForgotPasswordPage(WebDriver driver) {
         this.driver = driver;
     }
 
